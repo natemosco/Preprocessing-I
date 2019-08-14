@@ -48,18 +48,87 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
 
-html, body {
-	height: 100%;
-	// background:red;
-}
 /******************* Variables************/
 @title-font:'Work Sans', sans-serif;
 @header-font:'Montserrat', sans-serif;
 @body-font: 'Raleway', sans-serif;
 /******************* Mix-In's***************/
+.flexboxRight{
+	display:flex;
+	justify-content:flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flexboxLeft{
+	display:flex;
+	justify-content: left;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flexboxCenter{
+	display:flex;
+	justify-content: left;
+	align-items: center;
+	flex-wrap: wrap;
+}
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	border:2px solid red;
+	// background:red;
+}
+
+html, body {
+	height: 100%;
+	font-size:62.5%;
+}
+.wrapper{
+	.flexboxCenter();
+	width:100%;
+	padding:2% 5%;	
+	header{
+		width:100%;
+		height:5vh;
+		.flexboxRight();
+		font-size: 3em;
+		font-family:@title-font; 
+		nav{
+			width:50%;
+		}
+		a{
+			text-decoration:none;
+			color:black;
+			margin:0 7%;
+			border:2px black solid;
+
+		}
+
+		
+	
+
+		
+		
+
+	}//This closes the header
+	.topSection{
+		width:100%;
+		height:45vh;
+		.flexboxLeft();
+		background-color: rgb(189, 196, 194);
+	}//this closes .topSection
+	.midddleSection{
+		width:100%;
+		height:25vh;
+	}//This closes .middleSection
+	.bottomSection{
+		width:100%;
+		height:25vh;
+	}//This closes.bottomSection
+	footer{
+		width:100%;
+		height:10vh;
+	}//This closes footer
+} //This closes the Wrapper for the whole page
+
 
