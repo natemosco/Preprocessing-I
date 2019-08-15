@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -142,7 +142,7 @@ table {
 }
 .flexboxCenter {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -153,7 +153,6 @@ table {
 html,
 body {
   height: 100%;
-  font-size: 62.5%;
 }
 h1 {
   font-family: 'Work Sans', sans-serif;
@@ -174,7 +173,8 @@ h3 {
 h4 {
   font-size: 2.9rem;
 }
-h5 {
+h5,
+button {
   font-size: 2.4rem;
 }
 p,
@@ -184,7 +184,7 @@ td {
 }
 .wrapper {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -210,7 +210,7 @@ td {
 }
 .wrapper .topSection {
   width: 100%;
-  height: 50vh;
+  height: 80vh;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -225,16 +225,37 @@ td {
 .wrapper .topSection .title {
   width: 100%;
 }
+.wrapper .topSection .title hr {
+  width: 95%;
+  text-align: center;
+}
 .wrapper .topSection button {
   margin: 2% 0;
+  padding: 2% 4%;
+  width: 25%;
+  border: 1px solid white;
+  background-color: darkgrey;
+}
+.wrapper .topSection button a {
+  text-decoration-line: none;
+  color: white;
 }
 .wrapper .midddleSection {
   width: 100%;
-  height: 25vh;
+  height: 50vh;
   display: flex;
   justify-content: left;
   align-items: center;
   flex-wrap: wrap;
+}
+.wrapper .midddleSection .aboutMe {
+  width: 40%;
+}
+.wrapper .midddleSection .stuffImGoodAt {
+  width: 40%;
+}
+.wrapper .midddleSection .stuffImGoodAt p {
+  border: 1px solid lightgrey;
 }
 .wrapper .bottomSection {
   width: 100%;
