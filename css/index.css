@@ -149,7 +149,6 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  border: 2px solid red;
 }
 html,
 body {
@@ -158,7 +157,7 @@ body {
 }
 h1 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 2em;
+  font-size: 5rem;
 }
 h2,
 h3,
@@ -166,9 +165,22 @@ h4,
 h5 {
   font-family: 'Montserrat', sans-serif;
 }
-p {
+h2 {
+  font-size: 3.8em;
+}
+h3 {
+  font-size: 3.3rem;
+}
+h4 {
+  font-size: 2.9rem;
+}
+h5 {
+  font-size: 2.4rem;
+}
+p,
+td {
   font-family: 'Raleway', sans-serif;
-  font-size: 2em;
+  font-size: 1.8rem;
 }
 .wrapper {
   display: flex;
@@ -181,7 +193,6 @@ p {
 .wrapper header {
   width: 100%;
   height: 5vh;
-  font-size: 3em;
   font-family: 'Work Sans', sans-serif;
 }
 .wrapper header nav {
@@ -199,16 +210,17 @@ p {
 }
 .wrapper .topSection {
   width: 100%;
-  height: 45vh;
+  height: 50vh;
   display: flex;
   justify-content: left;
   align-items: center;
   flex-wrap: wrap;
   background-color: #bdc4c2;
   padding-left: 2%;
+  margin-bottom: 2%;
 }
 .wrapper .topSection img {
-  width: 25%;
+  width: 35%;
 }
 .wrapper .topSection .title {
   width: 100%;
