@@ -105,7 +105,7 @@ section {
   display: block;
 }
 body {
-  line-height: 1.5;
+  line-height: 1.25;
 }
 ol,
 ul {
@@ -222,11 +222,11 @@ td {
   align-items: center;
   flex-wrap: wrap;
   background-color: #bdc4c2;
-  padding-left: 2%;
+  padding: 1% 0 1% 2%;
   margin-bottom: 2%;
 }
 .wrapper .topSection img {
-  width: 35%;
+  width: 33%;
 }
 .wrapper .topSection .title {
   width: 100%;
@@ -257,16 +257,18 @@ td {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .wrapper .middleSection .aboutMe {
   width: 50%;
+  line-height: 1.5;
 }
 .wrapper .middleSection .stuffImGoodAt {
-  width: 40%;
+  width: 45%;
 }
 .wrapper .middleSection .stuffImGoodAt p {
   border: 1px solid lightgrey;
-  padding: 1.5% 0;
+  padding: 2%;
 }
 .wrapper .bottomSection {
   width: 100%;
