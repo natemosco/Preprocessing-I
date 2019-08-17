@@ -141,9 +141,9 @@ p, td{
 		width:100%;
 		height:50%;
 		.flexboxLeft();
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		background-color: rgb(189, 196, 194);
-		padding: 1% 0 1% 2%;
+		padding: 1% 1% 1% 2%;
 		margin-bottom:2%;
 		.img-holder{
 			width:100%;
@@ -177,13 +177,13 @@ p, td{
 
 	.middleSection{
 		width:100%;
-		height:55vh;
+		height:30%;
 		margin-bottom:	2%;
 		.flexboxBetween();
 		justify-content: space-around;
 			.aboutMe{
 			width:50%;
-			line-height: 1.1
+			line-height: 1.3
 		}
 			.stuffImGoodAt{
 			width:45%;
@@ -195,19 +195,36 @@ p, td{
 	}//This closes .middleSection************************
 	.bottomSection{
 		width:100%;
-		height:50vh;
+		height:30%;
 		margin-bottom: 2%
 		.flexboxLeft();
 		table{
 			width:100%;
 			td{
 				text-align:center;
+				padding: 1% 0;
+				border-bottom: 1px solid lightgray;
+				border-top: 1px solid lightgray;
 			} 
+			th{
+				width:10%;
+			}
 		}
 	}//This closes.bottomSection************************
 	footer{
 		width:100%;
-		height:10vh;
+		height:30%;
+		margin-top:3%;
+		background-color: rgb(189, 196, 194);
+		.flexboxCenter();
+		div{
+			margin:2% 0 1% 0;
+			width:90%;
+			height:90%;
+			border: 1px solid rgb(101, 101, 107);
+			border-radius: 10px;
+			background-color: silver;
+		}
 	}//This closes footer************************
 } //This closes the wrapper for the whole page********************
 

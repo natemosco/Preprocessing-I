@@ -226,9 +226,8 @@ td {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  flex-wrap: nowrap;
   background-color: #bdc4c2;
-  padding: 1% 0 1% 2%;
+  padding: 1% 1% 1% 2%;
   margin-bottom: 2%;
 }
 .wrapper .topSection .img-holder {
@@ -261,7 +260,7 @@ td {
 }
 .wrapper .middleSection {
   width: 100%;
-  height: 55vh;
+  height: 30%;
   margin-bottom: 2%;
   display: flex;
   justify-content: space-between;
@@ -271,7 +270,7 @@ td {
 }
 .wrapper .middleSection .aboutMe {
   width: 50%;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 .wrapper .middleSection .stuffImGoodAt {
   width: 45%;
@@ -282,7 +281,7 @@ td {
 }
 .wrapper .bottomSection {
   width: 100%;
-  height: 50vh;
+  height: 30%;
   margin-bottom: 2% display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;;
 }
 .wrapper .bottomSection table {
@@ -290,8 +289,28 @@ td {
 }
 .wrapper .bottomSection table td {
   text-align: center;
+  padding: 1% 0;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+.wrapper .bottomSection table th {
+  width: 10%;
 }
 .wrapper footer {
   width: 100%;
-  height: 10vh;
+  height: 30%;
+  margin-top: 3%;
+  background-color: #bdc4c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wrapper footer div {
+  margin: 2% 0 1% 0;
+  width: 90%;
+  height: 90%;
+  border: 1px solid #65656b;
+  border-radius: 10px;
+  background-color: silver;
 }
