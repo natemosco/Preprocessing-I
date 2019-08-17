@@ -136,8 +136,9 @@ table {
 }
 .flexboxLeft {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 .flexboxCenter {
@@ -159,10 +160,11 @@ table {
 html,
 body {
   height: 100%;
+  width: 100%px;
 }
 h1 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 5rem;
+  font-size: 3.2rem;
 }
 h2,
 h3,
@@ -171,30 +173,32 @@ h5 {
   font-family: 'Montserrat', sans-serif;
 }
 h2 {
-  font-size: 3.8em;
+  font-size: 2.8em;
 }
 h3 {
-  font-size: 3.3rem;
+  font-size: 2.4rem;
 }
 h4 {
-  font-size: 2.9rem;
+  font-size: 2.1rem;
 }
 h5,
 button {
-  font-size: 2.4rem;
+  font-size: 1.9rem;
 }
 p,
 td {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 90%;
   width: 100%;
   padding: 2% 5%;
+  margin: 0 auto;
 }
 .wrapper header {
   width: 100%;
@@ -212,20 +216,25 @@ td {
   text-decoration: none;
   color: black;
   margin: 0 3%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .wrapper .topSection {
   width: 100%;
-  height: 80vh;
+  height: 50%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: #bdc4c2;
   padding: 1% 0 1% 2%;
   margin-bottom: 2%;
 }
-.wrapper .topSection img {
+.wrapper .topSection .img-holder {
+  width: 100%;
+}
+.wrapper .topSection .img-holder img {
   width: 33%;
 }
 .wrapper .topSection .title {
@@ -262,7 +271,7 @@ td {
 }
 .wrapper .middleSection .aboutMe {
   width: 50%;
-  line-height: 1.5;
+  line-height: 1.1;
 }
 .wrapper .middleSection .stuffImGoodAt {
   width: 45%;
@@ -274,7 +283,13 @@ td {
 .wrapper .bottomSection {
   width: 100%;
   height: 50vh;
-  margin-bottom: 2%;
+  margin-bottom: 2% display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;;
+}
+.wrapper .bottomSection table {
+  width: 100%;
+}
+.wrapper .bottomSection table td {
+  text-align: center;
 }
 .wrapper footer {
   width: 100%;
