@@ -349,6 +349,7 @@ td {
 @media (max-width: 500px) {
   .wrapper .middleSection .stuffImGoodAt {
     width: 100%;
+    background-color: #b5f8f8;
   }
 }
 .wrapper .middleSection .stuffImGoodAt p {
@@ -362,8 +363,12 @@ td {
 }
 .wrapper .bottomSection table {
   width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #cdcdcd;
+  font: normal 1.2rem arial;
 }
-.wrapper .bottomSection table td {
+.wrapper .bottomSection table td,
+.wrapper .bottomSection table th {
   text-align: center;
   padding: 1% 0;
   border-bottom: 1px solid lightgray;
@@ -371,6 +376,52 @@ td {
 }
 .wrapper .bottomSection table th {
   width: 10%;
+  background: #c5c5c5;
+}
+@media only screen and (max-width: 500px) {
+  .wrapper .bottomSection table table,
+  .wrapper .bottomSection table thead,
+  .wrapper .bottomSection table tbody,
+  .wrapper .bottomSection table th,
+  .wrapper .bottomSection table td,
+  .wrapper .bottomSection table tr {
+    display: block;
+  }
+  .wrapper .bottomSection table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .wrapper .bottomSection table tr {
+    border-bottom: 1px solid #ccc;
+  }
+  .wrapper .bottomSection table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  .wrapper .bottomSection table td:before {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .wrapper .bottomSection table td:nth-of-type(1):before {
+    content: "Years";
+  }
+  .wrapper .bottomSection table td:nth-of-type(2):before {
+    content: "Company";
+  }
+  .wrapper .bottomSection table td:nth-of-type(3):before {
+    content: "Job Title";
+  }
+  .wrapper .bottomSection table td:nth-of-type(4):before {
+    content: "Tech Used";
+  }
 }
 .wrapper footer {
   width: 100%;
@@ -391,6 +442,11 @@ td {
   border: 1px solid #bdc4c2;
   border-radius: 10px;
   background-color: silver;
+}
+@media (max-width: 500px) {
+  .wrapper footer div {
+    background-color: #b5f8f8;
+  }
 }
 .wrapper footer p {
   padding-bottom: 1%;

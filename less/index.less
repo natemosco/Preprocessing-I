@@ -255,7 +255,7 @@ p, td{
 			width:45%;
 			@media (max-width:500px) {
 				width:100%; 
-				
+				background-color: @mobile-bg-color;
 			}
 
 			p{
@@ -271,7 +271,10 @@ p, td{
 		.flexboxLeft();
 		table{
 			width:100%;
-			td{
+			border-collapse: collapse;
+			border: 1px solid #cdcdcd;
+			font: normal 1.2rem arial; 
+			td, th{
 				text-align:center;
 				padding: 1% 0;
 				border-bottom: 1px solid lightgray;
@@ -279,6 +282,39 @@ p, td{
 			} 
 			th{
 				width:10%;
+				background: #c5c5c5;
+
+			}
+			@media only screen and (max-width: 500px){
+				table, thead, tbody, th, td, tr { 
+					display: block; 
+				}
+				thead tr { 
+					position: absolute;
+					top: -9999px;
+					left: -9999px;
+				}	
+				tr { border-bottom: 1px solid #ccc; }
+		
+				td { 
+					border: none;
+					border-bottom: 1px solid #eee; 
+					position: relative;
+					padding-left: 50%; 
+				}
+				td:before { 
+					position: absolute;
+					top: 3px;
+					left: 6px;
+					width: 45%; 
+					padding-right: 10px; 
+					white-space: nowrap;
+					font-weight: bold;
+				}		
+				td:nth-of-type(1):before { content: "Years"; }
+				td:nth-of-type(2):before { content: "Company"; }
+				td:nth-of-type(3):before { content: "Job Title"; }
+				td:nth-of-type(4):before { content: "Tech Used"; }
 			}
 		}
 	}//This closes.bottomSection************************
@@ -297,6 +333,9 @@ p, td{
 			border: 1px solid @banner-color;
 			border-radius: 10px;
 			background-color: silver;
+			@media (max-width:500px){
+				background-color: @mobile-bg-color;
+			}
 		}
 		p{
 			padding-bottom: 1%;
