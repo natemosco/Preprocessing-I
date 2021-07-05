@@ -6,7 +6,12 @@
 
   <title>My Resume</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/index.css">
+
+  <!-- link to google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Raleway:300|Work+Sans&display=swap" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +19,95 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <a href="http://">Home</a>
+        <a href="http://">About</a>
+        <a href="http://">Portfolio</a>
+        <a href=#contactInfo>Contact</a>
+      </nav>
+    </header>
+    <section class="topSection">
+      <div class="img-holder">
+        <img id="temp" src="Images/Desk-Photo.jpeg" alt="Modern style desk with MacBook Pro and iPhone as a part of workspace">
+      </div>
+
+      <div class="title">
+        <h1>Nathaniel Mosco - FullStack Web Developer</h1>
+        <p>Making technology help us solve problems is my passion!</p>
+        <hr />
+        <p>Occasionally I have time to work on side projects. If you're interested, let me know by signing up on this website.</p>
+        <button><a href="mailto:natemosco@gmail.com?subject=Let's Team Up On A Project
+          &body=Please send me your contact information and the nature of the problem we can solve together below:">Lets Team Up</a>
+          </button>
+      </div>
+    </section>
+    <section class="middleSection">
+      <div class="aboutMe">
+        <h2>About Me</h2>
+        <p>Through Web Development I am able to express myself fully. I discovered that I enjoy solving problems, helping teach others, and helping others thrive with technology. My career journey pit-stops includes traveling sales, a small dermatology office clerk and working as a nurse. In every phase of this journey technology made it possible for me to help the business or patients thrive. Now looking back I realize I am presented with the opportunity to design and develop new tools to help countless others. I am excited to help meet your needs and make your vision a reality.</p>
+      </div>
+      <div class="stuffImGoodAt">
+        <h3>Stuff I'm Good At</h3>
+        <p>Interpersonal Communication</p>
+        <p>Quickly learning new technologies</p>
+        <p>Understanding complex systems</p>
+        <p>Working as a team player</p>
+        <p>Teaching others</p>
+        <p>Trouble shooting and problem identification</p>
+      </div>
+    </section>
+    <section class="bottomSection">
+      <h2>Work History</h2>
+      <table>
+        <thead >
+          <tr id="one">
+            <th>
+              <h4>Years</h4>
+            </th>
+            <th>
+              <h4>Company</h4>
+            </th>
+            <th>
+              <h4>Role</h4>
+            </th>
+            <th>
+              <h4>Tech Used</h4>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="two">
+              <td>8</td> <!--Years  -->
+              <td>Jewelry As Art</td> <!--Company  -->
+              <td>Traveling Sales</td> <!--Role  -->
+              <td>PC database email client system and various programs for advertisement production</td> <!--Tech Used  -->
+          </tr>
+          <tr id="three">
+            <td>2</td> <!--Years  -->
+            <td>Dr.Bruell Dermatology</td> <!--Company  -->
+            <td>Clerk & Tech</td> <!--Role  -->
+            <td>Scheduling software, Visia Machine and related skin analysis software</td> <!--Tech Used  -->
+          </tr>
+          
+          <tr id="four">
+            <td>2</td> <!--Years  -->
+            <td>IU Health</td> <!--Company  -->
+            <td>Registered Nurse</td> <!--Role  -->
+            <td>Electronic medical record charting with various intranet programs for patient education and medication verification</td> <!--Tech Used  -->
+          </tr>
+        </tbody>             
+      </table>
+    </section>
+    <footer id="contactInfo">
+      <div>
+        <p>Address: 1200 N. Quarry Rd. Apt.B1207<br/> Marion, Indiana 46952</p>
+        <p>Phone: (219) 331-4335</p>
+        <p>email: natemosco@gmail.com</p>
+      </div>
+      <p>Copyright Nathaniel Mosco 2019</p>
+    </footer>
+  </div>  <!--End of wrapper-->
 </body>
 </html>

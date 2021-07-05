@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.25;
 }
 ol, ul {
 	list-style: none;
@@ -48,12 +48,299 @@ table {
 	border-spacing: 0;
 }
 
+
+/******************* Variables************/
+@title-font:'Work Sans', sans-serif;
+@header-font:'Montserrat', sans-serif;
+@body-font: 'Raleway', sans-serif;
+
+@banner-color: rgb(189, 196, 194);
+@button-bg-color: darkgrey;
+@button-color: white;
+
+@sticky-bg-color: #333;
+@mobile-bg-color:  rgb(181, 248, 248);
+/******************* Mix-In's***************/
+.flexboxRight{
+	display:flex;
+	justify-content:flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flexboxLeft{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.flexboxCenter{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flexboxBetween{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	width:100%;
 }
+h1{
+	font-family: @title-font;
+	font-size:3.2rem;
+}
+h2, h3, h4, h5{
+	font-family: @header-font;
+}
+h2{
+	font-size:2.8em;
+}
+h3{
+	font-size:2.4rem;
+}
+h4{
+	font-size:2.1rem;
+} 
+h5, button{
+	font-size:1.9rem;
+}
+
+p, td{
+	font-family: @body-font;
+	font-size:1.6rem;
+}
+.wrapper{
+	.flexboxCenter();
+	max-width: 90%;	
+	width:100%;
+	padding:2% 5%;
+	margin: 0 auto;
+	@media (max-width:500px){
+		max-width: 100%;
+	}
+	
+
+	header{
+		width:100%;
+		height:5vh;
+		font-family:@title-font; 
+		@media (max-width: 500px){
+			height: 8vh;
+			position:sticky;
+			top:0;
+			background-color: @sticky-bg-color;
+			color: @button-color;
+			display:flex;
+			align-items: center;
+		}
+		nav{
+			width:100%;
+			.flexboxRight();
+
+		}
+		a{
+			text-decoration:none;
+			color:black;
+			margin:0 3%;
+			font-size: 1.4rem;
+			@media (max-width: 500px){
+				color: @button-color;
+			}
+		}
+	}//This closes the header************************
+
+	.topSection{
+		width:100%;
+		height:50%;
+		.flexboxLeft();
+		flex-wrap: wrap;
+		background-color: @banner-color;
+		padding: 1% 1% 1% 2%;
+		margin-bottom:2%;
+
+
+		@media (max-width: 500px) {
+			background:none;
+			background-image: url("../Images/Desk-Photo.jpeg");
+			background-repeat: no-repeat;
+			background-color:@mobile-bg-color;
+	
+		}
+		.img-holder{
+			width:100%;
+			img{
+				width:33%;
+			}
+			@media (max-width: 500px){
+				display:none;
+			}
+		}
+		.title{
+			width:100%;
+			h1{
+				@media (max-width:500px){
+					padding:5% 0 40% 0;
+					font-size: 2.5rem;
+				}
+			}
+			p{
+				@media (max-width:500px){
+					font-size: 1.5rem;
+				}
+			}
+			hr{
+				width:90%;
+				margin-left:0; 
+				text-align:left;
+			}
+		}
+		button{
+			margin: 2% 0;
+			padding: 1% 3%;
+			width: 22%;
+			border:1px solid white;
+			background-color: @button-bg-color;
+			@media (max-width:500px){
+				width:60%;
+				font-size: 1.5rem;
+			}
+			&:hover{
+				background-color:lighten((@button-bg-color), 20%);
+			}
+			a{
+				text-decoration-line: none;
+				color: @button-color;
+			}
+		}
+	}//this closes .topSection************************
+
+	.middleSection{
+		width:100%;
+		height:30%;
+		margin-bottom:	2%;
+		.flexboxBetween();
+		justify-content: space-around;
+		@media (max-width:500px){	
+			flex-direction: column;
+			p{
+				padding-top:2%;
+				font-size: 1.4rem;
+			}
+		}
+		h2, h3{
+			@media (max-width:500px){
+				font-size: 2.2rem;
+			}
+		}	
+		.aboutMe{
+			width:50%;
+			line-height: 1.3;
+			@media (max-width:500px) {
+				width:100%; 
+		
+			}
+			
+		}
+			.stuffImGoodAt{
+			width:45%;
+			@media (max-width:500px) {
+				width:100%; 
+				background-color: @mobile-bg-color;
+			}
+
+			p{
+				border: 1px solid lightgrey;
+				padding: 2%; 
+			}
+		}
+	}//This closes .middleSection************************
+	.bottomSection{
+		width:100%;
+		height:30%;
+		margin-bottom: 2%
+		.flexboxLeft();
+		table{
+			width:100%;
+			border-collapse: collapse;
+			border: 1px solid #cdcdcd;
+			font: normal 1.2rem arial; 
+			td, th{
+				text-align:center;
+				padding: 1% 0;
+				border-bottom: 1px solid lightgray;
+				border-top: 1px solid lightgray;
+			} 
+			th{
+				width:10%;
+				background: #c5c5c5;
+
+			}
+			@media only screen and (max-width: 500px){
+				table, thead, tbody, th, td, tr { 
+					display: block; 
+				}
+				thead tr { 
+					position: absolute;
+					top: -9999px;
+					left: -9999px;
+				}	
+				tr { border-bottom: 1px solid #ccc; }
+		
+				td { 
+					border: none;
+					border-bottom: 1px solid #eee; 
+					position: relative;
+					padding-left: 50%; 
+				}
+				td:before { 
+					position: absolute;
+					top: 3px;
+					left: 6px;
+					width: 45%; 
+					padding-right: 10px; 
+					white-space: nowrap;
+					font-weight: bold;
+				}		
+				td:nth-of-type(1):before { content: "Years"; }
+				td:nth-of-type(2):before { content: "Company"; }
+				td:nth-of-type(3):before { content: "Job Title"; }
+				td:nth-of-type(4):before { content: "Tech Used"; }
+			}
+		}
+	}//This closes.bottomSection************************
+	footer{
+		width:100%;
+		height:30%;
+		margin-top:3%;
+		background-color: rgb(189, 196, 194);
+		.flexboxCenter();
+		div{
+			font-family: @header-font;
+			margin:2% 0 1% 0;
+			padding:2%;
+			width:90%;
+			height:90%;
+			border: 1px solid @banner-color;
+			border-radius: 10px;
+			background-color: silver;
+			@media (max-width:500px){
+				background-color: @mobile-bg-color;
+			}
+		}
+		p{
+			padding-bottom: 1%;
+		}
+	}//This closes footer************************
+} //This closes the wrapper for the whole page********************
+
 
